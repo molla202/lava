@@ -32,7 +32,7 @@ source $HOME/.bash_profile
 [ ! -d ~/go/bin ] && mkdir -p ~/go/bin
 ```
 ## Kurulum
-Not: cüzdan adı ve moniker kısmını değiştiriniz.
+📯 Not: cüzdan adı ve moniker kısmını değiştiriniz.
 ```
 # set vars
 echo "export WALLET="cüzdan-adı"" >> $HOME/.bash_profile
@@ -129,3 +129,34 @@ sudo systemctl daemon-reload
 sudo systemctl enable lavad
 sudo systemctl restart lavad && sudo journalctl -u lavad -f
 ```
+## Cüzdan alma veya ekleme
+```
+lavad keys add cüzdan-adı
+```
+* import
+```
+lavad keys add cüzdan-adı --recover
+```
+
+
+## Validator kuruyoruz
+
+```
+lavad tx staking create-validator \
+--amount 1000000ulava \
+--from cüzdan-adı \
+--commission-rate 0.1 \
+--commission-max-rate 0.2 \
+--commission-max-change-rate 0.01 \
+--min-self-delegation 1 \
+--pubkey $(lavad tendermint show-validator) \
+--moniker "adınızı-yazınız" \
+--identity "" \
+--details "MUSTAFA KEMAL ATATÜRK ❤️" \
+--chain-id lava-testnet-2 \
+--gas auto --gas-adjustment 1.5 \
+-y
+```
+
+
+
