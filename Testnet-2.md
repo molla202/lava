@@ -1,12 +1,12 @@
+
+## Gerekli yazılımları kuralım
+```
 # install dependencies, if needed
 sudo apt update && sudo apt upgrade -y
 sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -y
-Node Name
-adınızı-yazınız
-Wallet
-cüzdan-adı
-Port
-20
+```
+## Go kurulumu
+```
 # install go, if needed
 cd $HOME
 ! [ -x "$(command -v go)" ] && {
@@ -20,7 +20,10 @@ echo "export PATH=$PATH:/usr/local/go/bin:~/go/bin" >> ~/.bash_profile
 source $HOME/.bash_profile
 }
 [ ! -d ~/go/bin ] && mkdir -p ~/go/bin
-
+```
+## Kurulum
+Not: cüzdan adı ve moniker kısmını değiştiriniz.
+```
 # set vars
 echo "export WALLET="cüzdan-adı"" >> $HOME/.bash_profile
 echo "export MONIKER="adınızı-yazınız"" >> $HOME/.bash_profile
@@ -115,3 +118,4 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable lavad
 sudo systemctl restart lavad && sudo journalctl -u lavad -f
+```
