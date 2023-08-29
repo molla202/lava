@@ -1,3 +1,13 @@
+# LAVA
+![image](https://github.com/molla202/lava/assets/91562185/f7fcc08f-b4c5-471f-bf4c-0cf404037e85)
+
+
+## Sistem Gereksinimleri
+| Bileşenler | Minimum Gereksinimler | 
+| ------------ | ------------ |
+| CPU |	4|
+| RAM	| 8+ GB |
+| Storage	| 500 GB SSD |
 
 ## Gerekli yazılımları kuralım
 ```
